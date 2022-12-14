@@ -1,0 +1,74 @@
+@import 'reset';
+
+body {
+    background-color: rgb(28, 26, 26);
+}
+
+.todo {
+    font-family: monospace;
+    font-size: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+    padding: 0 15px;
+
+    &__delete-all {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 30%;
+        min-width: 200px;
+        height: 30px;
+        border-radius: 25px;
+        border: 1px solid #fff;
+        background-color: rgb(64, 86, 138);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &__input {
+        background-color: rgb(255, 255, 255);
+        width: 50%;
+        min-width: 280px;
+        height: 50px;
+        border: none;
+        border-radius: 20px;
+        padding: 0 15px;
+        outline: none;
+        &::placeholder {
+            color: rgb(21, 52, 123);
+        }
+    }
+
+    &__list {
+        margin-top: 100px;
+    }
+
+    &__list-item {
+        position: relative;
+        display: block;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 15px 12px;
+        font-size: 24px;
+        color: rgb(21, 52, 123);
+        word-break: break-all;
+        cursor: pointer;
+
+        & span {
+            position: absolute;
+            top: 2px;
+            right: 8px;
+            font-size: 13px;
+            color: rgb(229, 99, 99);
+            cursor: pointer;
+            padding: 3px;
+        }
+    }
+
+    &__list-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
